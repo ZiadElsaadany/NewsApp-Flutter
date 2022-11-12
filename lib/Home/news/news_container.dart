@@ -24,7 +24,6 @@ List<News> newNews = [] ;
   void initState() {  // to initialize controller
     scrollContoller = ScrollController();
     scrollContoller.addListener(() {
-
       if(scrollContoller.position.atEdge){
         bool isTop = scrollContoller.position.pixels == 0 ;
         if(isTop) {
@@ -55,8 +54,6 @@ List<News> newNews = [] ;
       }
       );
     }
-
-
     return Expanded(
       child: FutureBuilder<NewsResponse>(
           future: ApiManager.getNews(sourceId: widget.selectedSource.id??""),

@@ -67,8 +67,6 @@ class _HomeScreenState extends State<HomeScreen> {
 
         }
   }
-
-
 }
 class NewsSearch extends SearchDelegate {
   @override
@@ -76,7 +74,9 @@ class NewsSearch extends SearchDelegate {
     // in end  appBar
          return  [
            IconButton(icon:Icon( Icons.search),
-             onPressed: ( ) {  showResults(context); } ,color: Colors.black,)
+             onPressed: ( ) {
+             showResults(context);
+             } ,color: Colors.black,)
          ] ;
 
   }

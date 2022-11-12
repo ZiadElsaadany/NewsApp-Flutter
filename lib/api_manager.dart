@@ -4,8 +4,8 @@ import 'package:http/http.dart' as http;
 import 'package:news/model/SourcesResponces.dart';
 import 'package:news/model/news_response/NewsResponse.dart';
 class ApiManager {
+static const String BaseUrl = 'newsapi.org' ;
 
-  static const String BaseUrl = 'newsapi.org' ;
  static Future<SourcesResponces> getSources (
      String categoryId
      ) async{
@@ -48,7 +48,7 @@ class ApiManager {
           'apikey':  '9273e8c3654242b380ed9fdbba8f8254',
           'sources':sourceId,
           'q': searchKeyWord,
-        'page' : '$page'
+          'page' : '$page'
 
         }
     ) ;
